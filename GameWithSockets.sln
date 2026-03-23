@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpServerMelodies", "TcpServerMelodies\TcpServerMelodies.csproj", "{700D4E40-5872-42B1-9EF7-B03B93C3C5DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpClientMelodies", "TcpClientMelodies\TcpClientMelodies.csproj", "{BFC9E7DC-4A26-43CE-B87D-EAF284A2D3B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MelodyLibrary", "MelodyLibrary\MelodyLibrary.csproj", "{EDAA70F2-7F8C-49E6-A75E-3F425B3B4D15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{700D4E40-5872-42B1-9EF7-B03B93C3C5DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{700D4E40-5872-42B1-9EF7-B03B93C3C5DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{700D4E40-5872-42B1-9EF7-B03B93C3C5DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{700D4E40-5872-42B1-9EF7-B03B93C3C5DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFC9E7DC-4A26-43CE-B87D-EAF284A2D3B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC9E7DC-4A26-43CE-B87D-EAF284A2D3B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC9E7DC-4A26-43CE-B87D-EAF284A2D3B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC9E7DC-4A26-43CE-B87D-EAF284A2D3B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDAA70F2-7F8C-49E6-A75E-3F425B3B4D15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDAA70F2-7F8C-49E6-A75E-3F425B3B4D15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDAA70F2-7F8C-49E6-A75E-3F425B3B4D15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDAA70F2-7F8C-49E6-A75E-3F425B3B4D15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

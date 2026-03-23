@@ -1,0 +1,93 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="TcpClientMelodies.Views.TrainingWindow"
+        Title="Тренировка пианино"
+        Width="900" Height="700"
+        WindowStartupLocation="CenterScreen"
+        CanResize="False">
+
+    <Window.Styles>
+        <!-- Стиль для БЕЛЫХ клавиш -->
+        <Style Selector="Button.whiteKey">
+            <Setter Property="Height" Value="200"/>
+            <Setter Property="VerticalAlignment" Value="Top"/> <!-- Важно! -->
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Bottom"/>
+            <Setter Property="Padding" Value="0,0,0,10"/>
+            <Setter Property="CornerRadius" Value="0,0,5,5"/>
+            <Setter Property="Background" Value="WhiteSmoke"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Margin" Value="0"/> <!-- Убираем отступы, чтобы они слиплись -->
+        </Style>
+            
+        <Style Selector="Button.whiteKey:pressed">
+            <Setter Property="Background" Value="#DDDDDD"/>
+        </Style>
+
+        <!-- Стиль для ЧЕРНЫХ клавиш (декоративные) -->
+        <Style Selector="Border.blackKey">
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Height" Value="120"/> <!-- Короче белых -->
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <!-- Z-Index автоматически выше, так как они объявлены позже в XAML -->
+            <Setter Property="Margin" Value="8,0"/> <!-- Отступы с боков, чтобы они были уже -->
+            <Setter Property="CornerRadius" Value="0,0,3,3"/>
+            <Setter Property="BorderBrush" Value="#333333"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <!-- Тень для объема -->
+            <Setter Property="BoxShadow" Value="2 2 5 0 #88000000"/>
+        </Style>
+    </Window.Styles>
+
+    <Grid RowDefinitions="Auto, *, Auto">
+        <!-- Заголовок -->
+        <TextBlock Grid.Row="0" 
+                   Text="Тренировка пианино" 
+                   FontSize="28" FontWeight="Bold"
+                   HorizontalAlignment="Center" Margin="0,20"/>
+        
+        <Grid Name= "Piano" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/> <ColumnDefinition Width="50"/> <!-- C -->
+                <ColumnDefinition Width="50"/> <ColumnDefinition Width="50"/> <!-- D -->
+                <ColumnDefinition Width="50"/> <ColumnDefinition Width="50"/> <!-- E -->
+                <ColumnDefinition Width="50"/> <ColumnDefinition Width="50"/> <!-- F -->
+                <ColumnDefinition Width="50"/> <ColumnDefinition Width="50"/> <!-- G -->
+                <ColumnDefinition Width="50"/> <ColumnDefinition Width="50"/> <!-- A -->
+                <ColumnDefinition Width="50"/> <ColumnDefinition Width="50"/> <!-- B -->
+            </Grid.ColumnDefinitions>
+
+            <!-- Белые клавиши -->
+            <Button Name="C" Grid.Column="0" Grid.ColumnSpan="2" Content="C" Classes="whiteKey"/>
+            <Button Name="D" Grid.Column="2" Grid.ColumnSpan="2" Content="D" Classes="whiteKey"/>
+            <Button Name="E" Grid.Column="4" Grid.ColumnSpan="2" Content="E" Classes="whiteKey"/>
+            <Button Name="F" Grid.Column="6" Grid.ColumnSpan="2" Content="F" Classes="whiteKey"/>
+            <Button Name="G" Grid.Column="8" Grid.ColumnSpan="2" Content="G" Classes="whiteKey"/>
+            <Button Name="A" Grid.Column="10" Grid.ColumnSpan="2" Content="A" Classes="whiteKey"/>
+            <Button Name="B" Grid.Column="12" Grid.ColumnSpan="2" Content="B" Classes="whiteKey"/>
+
+            <!-- Черные клавиши (Декорация) -->
+            <Border Grid.Column="1" Grid.ColumnSpan="2" Classes="blackKey"/>
+            <Border Grid.Column="3" Grid.ColumnSpan="2" Classes="blackKey"/>
+            <Border Grid.Column="7" Grid.ColumnSpan="2" Classes="blackKey"/>
+            <Border Grid.Column="9" Grid.ColumnSpan="2" Classes="blackKey"/>
+            <Border Grid.Column="11" Grid.ColumnSpan="2" Classes="blackKey"/>
+        </Grid>
+
+        <!-- Нижняя панель -->
+        <StackPanel Grid.Row="2" Margin="20" Spacing="20" VerticalAlignment="Bottom">
+            <TextBlock Text="Проверьте звук и привыкните к клавишам" 
+                       FontSize="16" HorizontalAlignment="Center" Foreground="Gray"/>
+            
+            <Button Name="StartGameButton" 
+                    Content="Готов к игре" 
+                    Background="#007ACC" Foreground="White" HorizontalAlignment="Center"
+                    FontSize="16" Padding="15,10" Margin="5"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

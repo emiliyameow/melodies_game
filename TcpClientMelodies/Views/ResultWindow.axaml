@@ -1,0 +1,106 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="TcpClientMelodies.Views.ResultWindow"
+        Title="Результат матча"
+        Width="480" Height="320"
+        WindowStartupLocation="CenterScreen"
+        CanResize="False">
+
+    <Grid RowDefinitions="Auto,*,Auto" Margin="20">
+
+        <!-- Заголовок -->
+        <StackPanel Grid.Row="0"
+                    Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    Margin="0,0,0,10">
+            <TextBlock Name="TitleText"
+                       Text="Игра завершена"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"/>
+            <TextBlock Text="Спасибо за игру!"
+                       FontSize="14"
+                       Foreground="Gray"
+                       HorizontalAlignment="Center"
+                       Margin="0,4,0,0"/>
+        </StackPanel>
+
+        <!-- Карточка с результатом -->
+        <Border Grid.Row="1"
+                BorderBrush="#CCCCCC"
+                BorderThickness="1"
+                CornerRadius="12"
+                Padding="16"
+                Background="#FAFAFA"
+                BoxShadow="0 4 12 0 #33000000">
+            <Grid RowDefinitions="Auto,*"
+                  ColumnDefinitions="*,*"
+                  Margin="4">
+
+                <!-- Статус по центру сверху -->
+                <TextBlock Grid.Row="0" Grid.ColumnSpan="2"
+                           Name="StatusText"
+                           Text="Победа!"
+                           FontSize="22"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,8"/>
+
+                <!-- Левая колонка: игрок -->
+                <StackPanel Grid.Row="1" Grid.Column="0"
+                            Orientation="Vertical"
+                            HorizontalAlignment="Center"
+                            Spacing="4">
+                    <TextBlock Text="Вы"
+                               FontSize="14"
+                               FontWeight="Bold"
+                               HorizontalAlignment="Center"/>
+                    <TextBlock Name="MyScoreText"
+                               Text="10"
+                               FontSize="24"
+                               FontWeight="Bold"
+                               Foreground="Green"
+                               HorizontalAlignment="Center"/>
+                </StackPanel>
+
+                <!-- Правая колонка: соперник -->
+                <StackPanel Grid.Row="1" Grid.Column="1"
+                            Orientation="Vertical"
+                            HorizontalAlignment="Center"
+                            Spacing="4">
+                    <TextBlock Text="Соперник"
+                               FontSize="14"
+                               FontWeight="Bold"
+                               HorizontalAlignment="Center"/>
+                    <TextBlock Name="OpponentScoreText"
+                               Text="5"
+                               FontSize="24"
+                               FontWeight="Bold"
+                               Foreground="#E53935"
+                               HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Нижние кнопки -->
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    Spacing="10"
+                    HorizontalAlignment="Center"
+                    Margin="0,12,0,0">
+            <!--<Button Name="RematchButton"
+                    Content="Реванш"
+                    Background="#007ACC"
+                    Foreground="White"
+                    Padding="16,8"
+                    FontSize="16"/>-->
+
+            <Button Name="ExitButton"
+                    Content="Выйти в лобби"
+                    Background="#E53935"
+                    Foreground="White"
+                    Padding="16,8"
+                    FontSize="16"/>
+        </StackPanel>
+    </Grid>
+</Window>
